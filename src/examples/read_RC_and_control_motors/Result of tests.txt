@@ -1,0 +1,12 @@
+Files first tested 20140129.
+
+There are two projects here, one uses std library function "pulseIn()" to read RC inputs, which returns
+ high time of a signal. This routine locks when called. The other project uses interrupts and manually
+calculating high time of input signals.
+
+During testing no output was sent to the motors, but the code for this is present.
+Instead the high-time of input from RC was printed to terminal.
+
+When using pulseIn() no input was printed to the terminal, only 0's. When using interrupts the Arduino
+ behaved strangely, sometimes printing as it should and on other occasions only printing what was printed
+ in Setup() as if hanged in the interupts.
